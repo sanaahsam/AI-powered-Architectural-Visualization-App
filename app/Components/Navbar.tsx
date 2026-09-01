@@ -32,7 +32,9 @@ function Navbar() {
             src="https://i.pinimg.com/736x/52/02/c1/5202c1e4e061271f90c8630acd1d24a1.jpg"
             alt="My image"
           />
-          <h1 className="logo-txt">Roomify</h1>
+          <a href="/" className="logo-txt">
+            Roomify
+          </a>
         </span>
 
         <a href="#Product">Product</a>
@@ -45,14 +47,14 @@ function Navbar() {
           <>
             <a>HI {userName}</a>
             <div className="auth-btn" onClick={handleAuth}>
-              <a href="#GetStarted">LOG OUT</a>
+              <p>LOG OUT</p>
             </div>
           </>
         ) : (
           <>
             <button onClick={handleAuth}>Sign In</button>
             <div className="auth-btn">
-              <a href="#GetStarted">GET STARTED</a>
+              <a href="/#getstarted">GET STARTED</a>
             </div>
           </>
         )}

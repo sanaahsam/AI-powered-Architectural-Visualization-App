@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 nav {
-  @apply flex flex-row items-center justify-between pl-2 pr-2 w-screen h-20 font-[Poppins];
+  @apply flex flex-row items-center justify-between  w-screen h-20 font-[Poppins] shadow-lg;
 }
 
 .logo {
@@ -10,7 +15,7 @@ nav {
 }
 
 .logo-img {
-  @apply w-15 h-15 rounded-2xl mr-2;
+  @apply w-15 h-15 rounded-2xl pr-2;
 }
 .logo-txt {
   @apply text-2xl font-extrabold;
@@ -21,7 +26,7 @@ nav {
 }
 
 .opt-right {
-  @apply flex items-center justify-around w-70;
+  @apply flex items-center justify-around w-90;
 }
 
 .auth-btn {

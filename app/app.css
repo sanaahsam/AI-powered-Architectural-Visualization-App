@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 @theme {
   --font-sans:
@@ -9,4 +12,123 @@
 * {
   padding: 0;
   box-sizing: border-box;
+}
+
+.home {
+  @apply flex flex-col items-center justify-center 
+  bg-[#faf9f6]  pt-[10%] text-center;
+}
+
+/* Main heading */
+.home h1 {
+  @apply max-w-6xl font-[Poppins] text-5xl font-extrabold py-4;
+  @apply leading-[1.4] tracking-[-0.03em] text-black;
+}
+
+/* Description */
+.home p {
+  @apply max-w-2xl py-3;
+  @apply font-mono uppercase;
+  @apply leading-[1.7] tracking-[0.12em];
+
+  font-size: 12px;
+  font-weight: 500;
+  color: #777;
+}
+
+/* Buttons container */
+.home-buttons {
+  @apply mt-10 flex items-center gap-4;
+}
+
+/* Start building button */
+.cta {
+  @apply flex items-center gap-2;
+  @apply rounded-md bg-[#ff642f];
+  @apply px-7 py-4;
+  @apply text-[13px] font-semibold tracking-wide text-white;
+  @apply shadow-sm transition;
+}
+
+.cta:hover {
+  @apply bg-[#e95625];
+}
+
+/* Demo button */
+.demo {
+  @apply rounded-md border border-gray-200 bg-white;
+  @apply px-8 py-4;
+  @apply text-[13px] font-semibold tracking-wide text-gray-700;
+  @apply shadow-sm transition;
+}
+
+.demo:hover {
+  @apply bg-gray-50;
+}
+
+.bgCheckbox {
+  @apply mt-20 relative flex items-center justify-center w-full max-w-5xl h-110 rounded-2xl border border-blue-100
+   overflow-hidden;
+  background-color: #f8fbff;
+  background-image:
+    linear-gradient(#91c3f5 1px, transparent 1px),
+    linear-gradient(90deg, #91c3f5 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.uploadCard {
+  @apply relative flex flex-col items-center justify-center w-[590px] h-[300px] bg-white rounded-lg shadow-lg;
+  z-index: 2;
+}
+
+.uploadIcon {
+  @apply mb-5 flex items-center justify-center py-4 px-4 rounded-full bg-orange-100;
+  color: #f97316;
+}
+
+.uploadCard h2 {
+  @apply font-[Roboto-Slab] text-black text-[30px] mb-2;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+}
+.uploadCard p {
+  @apply text-zinc-400;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.uploadCard a {
+  @apply cursor-pointer text-zinc-700 mt-3;
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.uploadCard a:hover {
+  color: #f97316;
+}
+
+#getstarted {
+  @apply flex flex-col items-center justify-center 
+  bg-[#faf9f6] pb-[7%] text-center;
+}
+
+.project-section {
+  @apply flex flex-col  
+  bg-[#faf9f6]  pt-[5%] text-center text-[Lato];
+}
+
+.projecth1 {
+  @apply mb-4 text-4xl text-[Lato] font-extrabold;
+}
+.projectP {
+  @apply mb-4 text-xl text-[Lato] font-extrabold;
 }
