@@ -56,6 +56,11 @@ export default function Home() {
         </p>
         <div className="project-conatainer">
           <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
         </div>
       </section>
     </div>

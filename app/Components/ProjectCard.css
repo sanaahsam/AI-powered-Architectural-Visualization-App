@@ -1,15 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import "tailwindcss";
 
 .project-card {
-  @apply w-full max-w-[330px] overflow-hidden rounded-xl bg-white border border-zinc-200
-   shadow-sm  transition-all duration-300;
+  @apply w-[300px] h-[400px] overflow-hidden rounded-xl bg-white border border-zinc-200
+   shadow-sm  transition-all duration-300 mr-10 my-5 text-[Lato];
 }
 .project-card:hover {
   @apply -translate-y-1 shadow-lg;
 }
 
 .project-image {
-  @apply relative w-full h-[230px] overflow-hidden bg-zinc-100;
+  @apply relative w-full h-[50] overflow-hidden bg-zinc-100;
 }
 .project-image img {
   @apply w-full h-full object-cover transition-transform duration-500;
@@ -20,8 +21,8 @@
 }
 
 .project-badge {
-  @apply absolute top-3 left-3 px-2 py-1 rounded-sm bg-white
-   border border-zinc-200 shadow-sm text-[8px] font-bold uppercase
+  @apply absolute top-3 left-3 px-3 py-2 rounded-sm bg-white
+   border border-zinc-200 shadow-sm text-[10px] font-bold uppercase
    tracking-wide text-zinc-700;
 }
 
@@ -33,11 +34,11 @@
 }
 
 .project-details h3 {
-  @apply m-0 font-serif text-[15px] font-semibold text-orange-400;
+  @apply m-0 text-[Lato]  text-[17px] font-semibold text-orange-400;
 }
 
 .project-meta {
-  @apply flex items-center gap-1.5 mt-1.5 text-[7px] uppercase
+  @apply flex items-center gap-1.5 mt-1.5 text-[9px] uppercase
    tracking-wide text-zinc-400;
 }
 
@@ -45,7 +46,7 @@
   @apply text-zinc-400 text-[9px];
 }
 .project-arrow {
-  @apply flex items-center justify-center w-9 h-9 shrink-0 rounded-full
+  @apply flex items-center justify-center w-11 h-11 shrink-0 rounded-full
    border-0 bg-orange-500 text-white text-lg cursor-pointer
     transition-all duration-200;
 }

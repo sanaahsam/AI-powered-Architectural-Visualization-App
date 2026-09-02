@@ -37,7 +37,7 @@ function Navbar() {
           </a>
         </span>
 
-        <a href="#Product">Product</a>
+        <a href="/#product">Product</a>
         <a href="#Pricing">Pricing</a>
         <a href="#Community">Community</a>
         <a href="#Enterprise">Enterprise</a>
