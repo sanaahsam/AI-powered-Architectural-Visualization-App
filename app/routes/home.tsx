@@ -3,6 +3,9 @@ import type { Route } from "./+types/home";
 import { GoArrowRight } from "react-icons/go";
 import { HiSquare3Stack3D } from "react-icons/hi2";
 import ProjectCard from "~/Components/ProjectCard";
+import Upload from "~/Components/Upload";
+import { FiUpload } from "react-icons/fi";
+import { useNavigate } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -16,6 +19,15 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
+  const navigate = useNavigate();
+
+  const handleUplodeComplete = async (base64Image: string) => {
+    const newId = Date.now().toString();
+
+    navigate(`/visualizer/${newId}`);
+    return true;
+  };
+
   return (
     <div>
       <Navbar />
@@ -37,14 +49,20 @@ export default function Home() {
       </section>
 
       <section id="getstarted">
-        <div className="bgCheckbox">
-          <div className="uploadCard">
-            <div className="uploadIcon">
-              <HiSquare3Stack3D size={27} />
+        <div id="upload" className="upload-shell">
+          <div className="grid-overlay" />
+
+          <div className="upload-card">
+            <div className="upload-head">
+              <div className="upload-icon">
+                <HiSquare3Stack3D className="icon" />
+              </div>
+
+              <h3>Upload your floor plan</h3>
+              <p>Supports JPG, PNG, formats up to 10MB</p>
             </div>
-            <h2>Upload your floor plan</h2>
-            <p>Supports JPG, PNG, formats up to 10MB</p>
-            <a>Upload images</a>
+
+            <Upload onComplete={handleUplodeComplete} />
           </div>
         </div>
       </section>
